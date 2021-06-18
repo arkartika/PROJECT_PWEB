@@ -19,7 +19,7 @@
                     </div>
                         <div class="col-md-8">
                             <div class="card-body">
-                                <h5>Rp.<?=number_format($data['harga_barang']);?>/<?=$data['satuan_barang'];?></h5>
+                                <h5>Rp.<?=number_format($data['harga_barang']);?><?=$data['satuan_barang'];?></h5>
                                 <div class="form-group">
                                     <label>qty</label>
                                     <input type="number" value="1" name="qty" class="col-lg-2 form-control" required>

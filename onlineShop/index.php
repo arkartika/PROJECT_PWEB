@@ -5,18 +5,21 @@ require "includes/header.php";
 if (isset($_GET['filter'])){
     $query = mysqli_query($con, "SELECT * FROM barang WHERE id_kategori= '".$_GET['filter']."'");
     $data = mysqli_fetch_array($query);
-}else
-if (isset($_GET['s'])){
-    $key = "%".$_GET['s']."%";
-    $query = mysqli_query($con, "SELECT * FROM barang WHERE nama_barang like '$key'");
-    $data = mysqli_fetch_array($query);
 }else{
-    $query = mysqli_query($con, "SELECT * FROM barang order by id_barang DESC");
+
+    if (isset($_GET['s'])){
+        $key = "%".$_GET['s']."%";
+        $query = mysqli_query($con, "SELECT * FROM barang WHERE nama_barang like '$key'");
+        $data = mysqli_fetch_array($query);
+    }else{
+        $query = mysqli_query($con, "SELECT * FROM barang order by id_barang DESC");
+    }
 }
 ?>
         <div class="row">
             <div class="col-lg-3">
-                <h1 class="my-4">RoLyShop</h1>
+                <h1 class="my-4">SELAMAT DATANG</h1>
+                <h2>RoLyShop</h2>
                 <div class="list-group">
                 <a href="<?=BASE_URL;?>" class="list-group-item">Semua Kategori</a>
                     <?php

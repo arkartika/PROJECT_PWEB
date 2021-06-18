@@ -17,5 +17,5 @@ require "../config/connect.php";
     <link href="<?=BASE_URL;?>assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link href="<?=BASE_URL;?>assets/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
     <link href="<?=BASE_URL;?>assets/css/sb-admin.css" rel="stylesheet">
-
+    <link href="<?=BASE_URL;?>assets/css/custom-admin.css" rel="stylesheet">
 </head> 
