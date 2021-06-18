@@ -1,6 +1,6 @@
 <?php
 $title = "Daftar Barang";
-require"includes/header.php";
+require "includes/header.php";
 ?>
 <div class="container-fluid">
 
@@ -44,7 +44,7 @@ require"includes/header.php";
                             <td><?=$data['harga_barang'];?></td>
                             <td><?=$data['stok_barang'];?></td>
                             <td>
-                                <img src="<?=BASE_URL;?>assets/barang/<?=$data['gambar_barang'];?>">
+                                <img class="w-50" src="<?=BASE_URL;?>assets/barang/ <?=$data['gambar_barang'];?>">
                             </td>
                             <td>
                                 <a href="barang_edit.php?id=<?=$data['id_barang'];?>" class = "btn btn-sm btn-success">Edit</a>

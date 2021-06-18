@@ -31,7 +31,7 @@ require"includes/header.php";
                 </thead>
                 <tbody>
                     <?php
-                    $query = mysql_query("select barang.*, penjualan.*, customer.* from penjualan
+                    $query = mysqli_query($con,"select barang.*, penjualan.*, customer.* from penjualan
                                             left join barang on barang.id_barang = penjualan.id_barang
                                             left join customer on customer.id_customer = penjualan.id_customer");
                     $data =mysqli_fetch_assoc($query);
@@ -45,7 +45,7 @@ require"includes/header.php";
                             <td><?=$no++;?></td>
                             <td><?=$data['nama_customer'];?></td>
                             <td><?=$data['nama_barang'];?></td>
-                            <td style='text-align:right'><?=number_format($data['harga_barang'];?></td>
+                            <td style='text-align:right'><?=number_format($data['harga_barang']);?></td>
                             <td style='text-align:center'><?=$data['qty_penjualan'];?></td>
                             <td style='text-align:right'><?=number_format($data['qty_penjualan'] * $data['harga_barang]']);?></td>
                         </tr>

@@ -20,7 +20,7 @@
                     </div>
                     <div class="form-group">
                         <div class="form-label-group">
-                            <textarea class="form-control" name="nama" placeholder="Alamat Lengkap" required></textarea>
+                            <textarea class="form-control" name="alamat" placeholder="Alamat Lengkap" required></textarea>
                         </div>
                     </div>
                     <div class="form-group">
@@ -31,4 +31,4 @@
                 </div>
             </div>
         </form> 
-<?php require="includes/footer.php";?>
+<?php require "includes/footer.php";?>

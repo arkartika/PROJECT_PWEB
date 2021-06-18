@@ -1,0 +1,12 @@
+.bg-dark {
+    background-color: #5d8ab7!important;
+}
+.card{
+    border-radius: 0;
+    border: 2px solid #708dab;
+}
+.form-search-c{
+    border: 2px solid #4c76a0;
+    padding: 10px;
+    margin: 10px 0;
+}
