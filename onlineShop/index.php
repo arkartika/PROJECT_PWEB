@@ -16,7 +16,7 @@ if (isset($_GET['s'])){
 ?>
         <div class="row">
             <div class="col-lg-3">
-                <h1 class="my-4">ROLY SHOP</h1>
+                <h1 class="my-4">RoLyShop</h1>
                 <div class="list-group">
                 <a href="<?=BASE_URL;?>" class="list-group-item">Semua Kategori</a>
                     <?php
@@ -34,12 +34,18 @@ if (isset($_GET['s'])){
                 <div class="row">
                     <div class="col-lg-12 mt-3">
                         <form action="" class="form-search-c" >
-                            <div class="form-group">
-                                <input class="form-control" type="search" value="<?php if (isset($_GET['s'])){echo $_GET['s'];}?>" name="s" placeholder="Masukkan Nama Produk">
-                            </div>
-                            <div class="form-group">
-                                <input type="submit" class="btn btn-sm btn-info" value="Cari Produk">
-                            </div>
+                            <div class="row">
+                                <div class= "col-md-9">
+                                    <div class="form-group">
+                                        <input class="form-control" type="search" value="<?php if (isset($_GET['s'])){echo $_GET['s'];}?>" name="s" placeholder="Masukkan Nama Produk">
+                                    </div>
+                                </div>
+                                <div class= "col-md-3">
+                                    <div class="form-group">
+                                        <input type="submit" class="btn btn-sm btn-info" value="Cari Produk">
+                                    </div>
+                                </div>
+                            </div>    
                         </form>
                     </div>
                 </div>
@@ -51,7 +57,7 @@ if (isset($_GET['s'])){
                         ?>
                         <div class="col-4">
                             <div class="card">
-                                <a href="tampil.php?id=<?=$data['id_barang'];?>">
+                                <a class= "link-image-product" href="tampil.php?id=<?=$data['id_barang'];?>">
                                     <img class="card-img-top " style ="height :300px;" src="<?=BASE_URL;?>assets/barang/ <?=$data['gambar_barang'];?>" alt="">
                                 </a>
                                 <div class="card-body">
@@ -61,7 +67,7 @@ if (isset($_GET['s'])){
                                     </h4>
                                 </div>                    
                                 <div class="card-footer">
-                                    <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                                    <a class="btn-beli" href="tampil.php?id=<?=$data['id_barang'];?>">BELI</a>
                                 </div>
                             </div>
                         </div>

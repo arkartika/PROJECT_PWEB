@@ -11,7 +11,7 @@ if (isset($_POST['login'])){
 
     if($row>0){
         $_SESSION['admin'] = TRUE; 
-        echo "<meta http-equiv='refresh' content='0, url=".BASE_URL."index.php'/>";
+        echo "<meta http-equiv='refresh' content='0, url=".BASE_URL."admin/index.php'/>";
     
     }else{
         $err = "LOGIN GAGAL";
